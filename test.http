@@ -1,0 +1,38 @@
+### ========== TES BERITA ==========
+
+### 1. GET Semua Berita
+GET http://localhost:3000/berita
+
+### 2. POST Tambah Berita (Data 1)
+POST http://localhost:3000/berita
+Content-Type: application/json
+
+{
+    "admin_id": 1,
+    "kategori": "Sosial",
+    "penerbit": "Joko Supriyo",
+    "judul_berita": "Karnaval Sound Horeg di Kediri",
+    "konten": "Polres Kediri membubarkan karnaval sound horeg di Desa Duwet setelah warga mengeluh. Pembubaran dilakukan karena melanggar kesepakatan pengaturan suara.",
+    "gambar_thumbnail": "horeg1.jpg",
+    "tanggal_terbit": "2026-10-25"
+}
+
+### 3. GET Berita Berdasarkan ID
+GET http://localhost:3000/berita/2
+
+### 4. PUT Ubah/Update Berita (Memperbarui ID 1)
+PUT http://localhost:3000/berita/1
+Content-Type: application/json
+
+{
+    "admin_id": 1,
+    "kategori": "Sosial Budaya",
+    "penerbit": "Joko Supriyo",
+    "judul_berita": "Karnaval Sound Horeg di Desa Ngadiluwih Kediri",
+    "konten": "Polres Kediri membubarkan karnaval sound horeg di Desa Duwet setelah warga mengeluh. Pembubaran dilakukan karena melanggar kesepakatan pengaturan suara.",
+    "gambar_thumbnail": "horeg1.jpg",
+    "tanggal_terbit": "2026-10-25"
+}
+
+### 5. DELETE Hapus Berita (ID 1)
+DELETE http://localhost:3000/berita/2
